@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="24dp"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_buttons"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:id="@+id/permission_icon1"
+            app:srcCompat="@drawable/ic_permission_camera_icon"
+            android:scaleType="centerInside"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/permission_icon_bg"
+            tools:ignore="VectorDrawableCompat" />
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_permission_storage_icon"
+            android:layout_marginLeft="6dp"
+            android:id="@+id/permission_icon3"
+            android:background="@drawable/permission_icon_bg"
+            tools:ignore="VectorDrawableCompat" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/permission_title"
+        android:text="Permissions Required"
+        android:layout_marginTop="32dp"
+        android:textSize="18sp"
+        android:textColor="#424242"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:id="@+id/permissionDescription"
+        android:text="CustomCamera needs camera and storage permissions to capture and store images."
+        android:textColor="#6e6e6e"/>
+
+    <Button
+        android:id="@+id/permissionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_permission_bg"
+        android:text="Allow Permissions"
+        android:textColor="@color/text_permission"
+        android:textStyle="bold"
+        android:textSize="14sp" />
+</LinearLayout>
