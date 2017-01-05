@@ -157,7 +157,7 @@ class CameraFragment : Fragment(), Camera.AutoFocusCallback {
                 }
                 realImage = BitmapUtil.flip(realImage, BitmapUtil.Direction.VERTICAL)
             }
-            if (isFrontCamera) {
+            if (isFrontCamera && (mOrientation==0 || mOrientation==180)) {
                 rotateAngle -= 180
             }
             realImage = BitmapUtil.rotate(realImage, rotateAngle)
